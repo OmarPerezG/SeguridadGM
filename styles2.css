@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 0;
+    background-image: url('Imagenes/fondometal.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo al viewport */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo-left img,
+.logo-right img {
+    height: 80px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+.navbar-title {
+    flex: 1;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Añadir margen superior al contenedor de preguntas */
+.quiz-container {
+    margin-top: 40px; /* Ajusta el valor para crear más o menos espacio */
+}
+
+.container2 {
+    background-color: #f0f0f0; /* Color de fondo blanco similar al de la pregunta */
+    color: #333; /* Color del texto */
+    padding: 20px; /* Espaciado interior */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px; /* Margen en todos los lados */
+    text-align: center; /* Centra el texto */
+    border: 2px solid #ccc; /* Borde del contenedor */
+    max-width: 98%; /* Ajusta el tamaño máximo del contenedor */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del contenedor */
+    width: 100%; /* Asegura que el contenedor use el 100% del ancho disponible */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilo para los botones de dificultad */
+.difficulty-button {
+    width: 30%; /* Ajusta el ancho de cada imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 10px; /* Espaciado entre imágenes */
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en la pantalla */
+}
+
+/* Estilo para las preguntas y opciones */
+.quiz-container h2 {
+    background-color: #f0f0f0; /* Color de fondo de la pregunta */
+    color: #333; /* Color del texto */
+    padding: 20px; /* Espaciado interior */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 0; /* Elimina márgenes externos */
+    text-align: center; /* Centra el texto */
+    border: 2px solid #ccc; /* Borde del contenedor */
+}
+
+#options {
+    display: flex;
+    flex-direction: column; /* Dispone los botones en columna */
+    gap: 10px; /* Espacio entre los botones */
+    margin: 0 20px; /* Margen lateral para los botones */
+}
+
+#options button {
+    width: calc(100% - 40px); /* Ajusta el ancho para tener en cuenta el margen */
+    background-color: #545454;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    font-size: 24px; /* Tamaño de fuente relativo */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del botón */
+}
+
+#options button:hover {
+    background-color: #949292;
+}
+
+/* Ajustes adicionales para pantallas más grandes */
+@media (min-width: 600px) {
+    #options button {
+        font-size: 28px; /* Tamaño de fuente más grande en pantallas más grandes */
+    }
+}
+
+@media (min-width: 992px) {
+    #options button {
+        font-size: 32px; /* Tamaño de fuente más grande en pantallas muy grandes */
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 12px;
+}
+
+#resultMessage {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
